@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    int vetor[5]; // Declaração do vetor para armazenar os números inteiros
+    int i, soma = 0; // Variáveis para controle do loop e da soma
+
+    // Solicita e armazena os cinco números inteiros no vetor
+    printf("Digite cinco números inteiros:\n");
+    for(i = 0; i < 5; i++) {
+        printf("Numero %i: ", i + 1);
+        scanf("%i", &vetor[i]);
+    }
+
+    // Percorre o vetor e calcula a soma de todos os seus valores
+    for(i = 0; i < 5; i++) {
+        soma += vetor[i];
+    }
+
+    // Exibe o resultado da soma
+    printf("A soma dos números digitados e: %i\n", soma);
+
+    return 0;
+}
